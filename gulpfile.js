@@ -9,16 +9,16 @@ function buildStylesTask() {
     .pipe(dest("./assets/css/"));
 }
 
+// Watch Sass Task
+function watchStylesTask() {
+  watch("./assets/sass/**/*.scss", buildStylesTask);
+}
+
 // Copy Plugin Task
 // function copyPluginsTask() {
 //   return src("./node_modules/boxicons*/**/*")
 //   .pipe(useref())
 //   .pipe(dest("./assets/plugins/"));
 // }
-
-// Watch Sass Task
-function watchStylesTask() {
-  watch("./assets/sass/**/*.scss", buildStylesTask);
-}
 
 exports.default = series(buildStylesTask, watchStylesTask);

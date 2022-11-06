@@ -14,7 +14,7 @@
 
   .navbar- {
     &nav {
-      column-gap: 20px;
+      column-gap: 25px;
     }
     &search {
       position: relative;
@@ -55,13 +55,12 @@
       text-decoration: none;
       list-style: none;
       border-radius: 50%;
-      background-color: $primary-color;
-
-      & a {
-        color: $white-color;
-        font-size: 18px;
+      color: $white-color;
+      font-size: 18px;
+      transition: 0.3s;
+      &:hover {
+        background-color: $primary-color;
       }
-
       & img {
         border-radius: 50%;
       }
