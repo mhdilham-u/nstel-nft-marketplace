@@ -58,11 +58,17 @@
       color: $white-color;
       font-size: 18px;
       transition: 0.3s;
+      position: relative;
       &:hover {
         background-color: $primary-color;
       }
       & img {
         border-radius: 50%;
+      }
+      & img.verified {
+        position: absolute;
+        bottom: 0;
+        right: 0;
       }
     }
   }
