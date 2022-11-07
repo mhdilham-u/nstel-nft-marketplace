@@ -3,12 +3,26 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
+.bg-gradient {
+  background: linear-gradient(276.03deg, #b050e9 5.64%, #e7a4b1 50.71%, #d593d8 94.87%) !important;
+}
+
+.bg-primary {
+  background-color: #3f3c4e !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
 $light-color: #d2d2d2;
 $white-color: #ffffff;
 $transparent-color: rgba(255, 255, 255, 0.7);
 $black-color: #000000;
 $background-color: #040310;
 $primary-color: #3f3c4e;
+// $background-gradient: linear-gradient(276.03deg, #b050e9 5.64%, #e7a4b1 50.71%, #d593d8 94.87%) !important;
 
 $font-weights: (
   light: 300,
@@ -42,4 +56,16 @@ $font-weights: (
   -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor; /*5'*/
   // -webkit-mask-composite: exclude; /*5*/
+}
+
+@mixin badge-basic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  height: 20px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: map-get($font-weights, medium);
+  text-transform: uppercase;
 }

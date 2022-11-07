@@ -71,13 +71,118 @@
       opacity: 1;
       margin: 10px 0;
     }
-    // &sum:nth-child(2) {
-    //   height: 40px;
-    //   vertical-align: middle !important;
-    //   padding: 0 40px;
-    //   border-style: solid;
-    //   border-width: 0 1.5px;
-    //   border-color: $primary-color;
-    // }
+    &badge {
+      @include badge-basic;
+    }
+  }
+
+  .swiper {
+    // margin: 0;
+    &-wrapper {
+      width: auto;
+    }
+
+    &-slide {
+      width: 300px !important;
+      height: 482px;
+      background-color: $primary-color !important;
+    }
+    &-img1 {
+      width: 95%;
+      height: 97%;
+      border-radius: 15px;
+      background-image: url(../img/art-1.jpg) !important;
+    }
+    &-img2 {
+      width: 95%;
+      height: 97%;
+      border-radius: 15px;
+      background-image: url(../img/art-2.jpg) !important;
+    }
+    &-img3 {
+      width: 95%;
+      height: 97%;
+      border-radius: 15px;
+      background-image: url(../img/art-3.jpg) !important;
+    }
+    &-img4 {
+      width: 95%;
+      height: 97%;
+      border-radius: 15px;
+      background-image: url(../img/art-4.jpg) !important;
+    }
+    &-img5 {
+      width: 95%;
+      height: 97%;
+      border-radius: 15px;
+      background-image: url(../img/art-5.jpg) !important;
+    }
+    &-img6 {
+      width: 95%;
+      height: 97%;
+      border-radius: 15px;
+      background-image: url(../img/art-6.jpg) !important;
+    }
+    &-btn {
+      @include button-basic;
+      font-size: 14px;
+      font-weight: map-get($font-weights, medium);
+      width: 120px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 30%;
+      bottom: 50%;
+    }
+    &-glass {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      background: radial-gradient(98.48% 326.98% at 0% 3.35%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+      backdrop-filter: blur(21px);
+      border: 1px solid $white-color;
+      border-radius: 15px;
+      padding: 16px;
+      position: absolute;
+      bottom: 0;
+      margin: 0 8px 15px 8px;
+      width: 270px;
+      height: 107px;
+      & h5 {
+        font-size: 18px;
+        font-weight: map-get($font-weights, semibold);
+        margin-bottom: 13px;
+      }
+      & h6 {
+        font-size: 12px;
+        font-weight: map-get($font-weights, light);
+        color: $transparent-color;
+        margin-bottom: 3px;
+      }
+      & p {
+        font-weight: map-get($font-weights, medium);
+        font-size: 14px;
+        margin: 0 3px;
+        vertical-align: middle;
+        // height: 20px;
+      }
+      & .bidder img {
+        margin-left: -19px;
+      }
+    }
+    &-button-next,
+    &-button-prev {
+      font-size: 45px;
+      color: $white-color;
+      margin: 45px -160px 0 -90px !important;
+
+      & .bx-chevron-right,
+      & .bx-chevron-left {
+        border: 2px solid $white-color;
+        border-radius: 50%;
+      }
+    }
   }
 }
