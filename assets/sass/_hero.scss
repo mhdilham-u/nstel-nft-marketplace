@@ -3,6 +3,7 @@
   align-items: center;
   height: 89vh;
   background-color: $background-color;
+  margin-bottom: 100px;
   .hero- {
     &heading {
       font-weight: map-get($font-weights, bold);
@@ -71,57 +72,61 @@
       opacity: 1;
       margin: 10px 0;
     }
-    &badge {
-      @include badge-basic;
-    }
   }
 
   .swiper {
-    // margin: 0;
+    width: 240px;
+    height: 320px;
     &-wrapper {
       width: auto;
     }
-
     &-slide {
       width: 300px !important;
       height: 482px;
       background-color: $primary-color !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
     }
     &-img1 {
       width: 95%;
       height: 97%;
       border-radius: 15px;
-      background-image: url(../img/art-1.jpg) !important;
+      background-image: url(../img/art/art-1.jpg) !important;
     }
     &-img2 {
       width: 95%;
       height: 97%;
       border-radius: 15px;
-      background-image: url(../img/art-2.jpg) !important;
+      background-image: url(../img/art/art-2.jpg) !important;
     }
     &-img3 {
       width: 95%;
       height: 97%;
       border-radius: 15px;
-      background-image: url(../img/art-3.jpg) !important;
+      background-image: url(../img/art/art-3.jpg) !important;
     }
     &-img4 {
       width: 95%;
       height: 97%;
       border-radius: 15px;
-      background-image: url(../img/art-4.jpg) !important;
+      background-image: url(../img/art/art-4.jpg) !important;
     }
     &-img5 {
       width: 95%;
       height: 97%;
       border-radius: 15px;
-      background-image: url(../img/art-5.jpg) !important;
+      background-image: url(../img/art/art-5.jpg) !important;
     }
     &-img6 {
       width: 95%;
       height: 97%;
       border-radius: 15px;
-      background-image: url(../img/art-6.jpg) !important;
+      background-image: url(../img/art/art-6.jpg) !important;
     }
     &-btn {
       @include button-basic;

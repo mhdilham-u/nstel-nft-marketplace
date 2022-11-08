@@ -1,11 +1,13 @@
 const { src, dest, series, watch } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
+const autoprefixer = require("gulp-autoprefixer");
 // const useref = require("gulp-useref");
 
 // Build Sass Task
 function buildStylesTask() {
   return src("./assets/sass/**/*.scss")
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(autoprefixer())
     .pipe(dest("./assets/css/"));
 }
 
