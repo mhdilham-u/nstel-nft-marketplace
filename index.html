@@ -37,10 +37,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto me-5">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Live Bid</a>
+              <a class="nav-link" href="#live-section">Live Bid</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Discover</a>
@@ -295,8 +295,10 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button-next"><i class="bx bx-chevron-right"></i></div>
-              <div class="swiper-button-prev"><i class="bx bx-chevron-left"></i></div>
+              <div class="hero-navigation">
+                <i class="bx bx-chevron-left hero-navigation-prev"></i>
+                <i class="bx bx-chevron-right hero-navigation-next"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -336,7 +338,7 @@
                           <small>Remaining Time</small>
                           <span class="d-flex align-items-center justify-content-center">
                             <i class="bx bx-time-five me-1"></i>
-                            <p>12 h : 23 m : 09 s</p>
+                            <p id="countdown">12 h : 23 m : 09 s</p>
                           </span>
                         </div>
                       </div>
@@ -344,6 +346,62 @@
                   </div>
                   <div class="swiper-content">
                     <h5>Venus Statue Of Flowers #01</h5>
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <img class="creator" src="./assets/img/creator/creator-1.jpg" alt="" />
+                        <div class="d-flex flex-column ms-2">
+                          <h6>Gilbert Murphy</h6>
+                          <span>Creator</span>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <div class="badge dark me-1">bsc</div>
+                        <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
+                      </div>
+                    </div>
+                    <div class="text-dark">
+                      <hr />
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="d-flex flex-column">
+                        <span>Highest Bid</span>
+                        <div class="d-flex align-items-center">
+                          <img src="./assets/img/ethereum-icon.svg" alt="" />
+                          <p>0.99 ETH</p>
+                          <p>1/1</p>
+                        </div>
+                      </div>
+                      <a href="#" class="btn-basic border-gradient">
+                        <i class="bx bxs-shopping-bag me-1"></i>
+                        <p>Place bid</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide bg-primary">
+                  <div class="d-flex justify-content-center">
+                    <div class="position-relative mt-2" style="height: 298px">
+                      <img class="art" src="./assets/img/art/art-2.jpg" alt="" />
+                      <div class="d-flex position-absolute top-0 p-2 gap-1">
+                        <div class="badge category">Art</div>
+                        <div class="badge special">Special</div>
+                      </div>
+                      <div class="position-absolute top-0 end-0 p-2">
+                        <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                      </div>
+                      <div class="swiper-glass">
+                        <div class="d-flex text-center flex-column">
+                          <small>Remaining Time</small>
+                          <span class="d-flex align-items-center justify-content-center">
+                            <i class="bx bx-time-five me-1"></i>
+                            <p id="countdown">12 h : 23 m : 09 s</p>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-content">
+                    <h5>Venus Statue Of Flowers #02</h5>
                     <div class="d-flex justify-content-between">
                       <div class="d-flex align-items-center">
                         <img class="creator" src="./assets/img/creator/creator-1.jpg" alt="" />
@@ -392,14 +450,70 @@
                           <small>Remaining Time</small>
                           <span class="d-flex align-items-center justify-content-center">
                             <i class="bx bx-time-five me-1"></i>
-                            <p>12 h : 23 m : 09 s</p>
+                            <p id="countdown">12 h : 23 m : 09 s</p>
                           </span>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-content">
-                    <h5>Venus Statue Of Flowers #01</h5>
+                    <h5>Venus Statue Of Flowers #03</h5>
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <img class="creator" src="./assets/img/creator/creator-3.jpg" alt="" />
+                        <div class="d-flex flex-column ms-2">
+                          <h6>Gilbert Murphy</h6>
+                          <span>Creator</span>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <div class="badge dark me-1">bsc</div>
+                        <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
+                      </div>
+                    </div>
+                    <div class="text-dark">
+                      <hr />
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="d-flex flex-column">
+                        <span>Highest Bid</span>
+                        <div class="d-flex align-items-center">
+                          <img src="./assets/img/ethereum-icon.svg" alt="" />
+                          <p>0.99 ETH</p>
+                          <p>1/1</p>
+                        </div>
+                      </div>
+                      <a href="#" class="btn-basic border-gradient">
+                        <i class="bx bxs-shopping-bag me-1"></i>
+                        <p>Place bid</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide bg-primary">
+                  <div class="d-flex justify-content-center">
+                    <div class="position-relative mt-2" style="height: 298px">
+                      <img class="art" src="./assets/img/art/art-4.jpg" alt="" />
+                      <div class="d-flex position-absolute top-0 p-2 gap-1">
+                        <div class="badge category">Art</div>
+                        <div class="badge special">Special</div>
+                      </div>
+                      <div class="position-absolute top-0 end-0 p-2">
+                        <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                      </div>
+                      <div class="swiper-glass">
+                        <div class="d-flex text-center flex-column">
+                          <small>Remaining Time</small>
+                          <span class="d-flex align-items-center justify-content-center">
+                            <i class="bx bx-time-five me-1"></i>
+                            <p id="countdown">12 h : 23 m : 09 s</p>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-content">
+                    <h5>Venus Statue Of Flowers #04</h5>
                     <div class="d-flex justify-content-between">
                       <div class="d-flex align-items-center">
                         <img class="creator" src="./assets/img/creator/creator-1.jpg" alt="" />
@@ -435,7 +549,7 @@
                 <div class="swiper-slide bg-primary">
                   <div class="d-flex justify-content-center">
                     <div class="position-relative mt-2" style="height: 298px">
-                      <img class="art" src="./assets/img/art/art-1.jpg" alt="" />
+                      <img class="art" src="./assets/img/art/art-5.jpg" alt="" />
                       <div class="d-flex position-absolute top-0 p-2 gap-1">
                         <div class="badge category">Art</div>
                         <div class="badge special">Special</div>
@@ -448,14 +562,14 @@
                           <small>Remaining Time</small>
                           <span class="d-flex align-items-center justify-content-center">
                             <i class="bx bx-time-five me-1"></i>
-                            <p>12 h : 23 m : 09 s</p>
+                            <p id="countdown">12 h : 23 m : 09 s</p>
                           </span>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-content">
-                    <h5>Venus Statue Of Flowers #01</h5>
+                    <h5>Venus Statue Of Flowers #05</h5>
                     <div class="d-flex justify-content-between">
                       <div class="d-flex align-items-center">
                         <img class="creator" src="./assets/img/creator/creator-1.jpg" alt="" />
@@ -491,7 +605,7 @@
                 <div class="swiper-slide bg-primary">
                   <div class="d-flex justify-content-center">
                     <div class="position-relative mt-2" style="height: 298px">
-                      <img class="art" src="./assets/img/art/art-1.jpg" alt="" />
+                      <img class="art" src="./assets/img/art/art-6.jpg" alt="" />
                       <div class="d-flex position-absolute top-0 p-2 gap-1">
                         <div class="badge category">Art</div>
                         <div class="badge special">Special</div>
@@ -504,126 +618,14 @@
                           <small>Remaining Time</small>
                           <span class="d-flex align-items-center justify-content-center">
                             <i class="bx bx-time-five me-1"></i>
-                            <p>12 h : 23 m : 09 s</p>
+                            <p id="countdownbid">12 h : 23 m : 09 s</p>
                           </span>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-content">
-                    <h5>Venus Statue Of Flowers #01</h5>
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex align-items-center">
-                        <img class="creator" src="./assets/img/creator/creator-1.jpg" alt="" />
-                        <div class="d-flex flex-column ms-2">
-                          <h6>Gilbert Murphy</h6>
-                          <span>Creator</span>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <div class="badge dark me-1">bsc</div>
-                        <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
-                      </div>
-                    </div>
-                    <div class="text-dark">
-                      <hr />
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between">
-                      <div class="d-flex flex-column">
-                        <span>Highest Bid</span>
-                        <div class="d-flex align-items-center">
-                          <img src="./assets/img/ethereum-icon.svg" alt="" />
-                          <p>0.99 ETH</p>
-                          <p>1/1</p>
-                        </div>
-                      </div>
-                      <a href="#" class="btn-basic border-gradient">
-                        <i class="bx bxs-shopping-bag me-1"></i>
-                        <p>Place bid</p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide bg-primary">
-                  <div class="d-flex justify-content-center">
-                    <div class="position-relative mt-2" style="height: 298px">
-                      <img class="art" src="./assets/img/art/art-1.jpg" alt="" />
-                      <div class="d-flex position-absolute top-0 p-2 gap-1">
-                        <div class="badge category">Art</div>
-                        <div class="badge special">Special</div>
-                      </div>
-                      <div class="position-absolute top-0 end-0 p-2">
-                        <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
-                      </div>
-                      <div class="swiper-glass">
-                        <div class="d-flex text-center flex-column">
-                          <small>Remaining Time</small>
-                          <span class="d-flex align-items-center justify-content-center">
-                            <i class="bx bx-time-five me-1"></i>
-                            <p>12 h : 23 m : 09 s</p>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-content">
-                    <h5>Venus Statue Of Flowers #01</h5>
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex align-items-center">
-                        <img class="creator" src="./assets/img/creator/creator-1.jpg" alt="" />
-                        <div class="d-flex flex-column ms-2">
-                          <h6>Gilbert Murphy</h6>
-                          <span>Creator</span>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <div class="badge dark me-1">bsc</div>
-                        <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
-                      </div>
-                    </div>
-                    <div class="text-dark">
-                      <hr />
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between">
-                      <div class="d-flex flex-column">
-                        <span>Highest Bid</span>
-                        <div class="d-flex align-items-center">
-                          <img src="./assets/img/ethereum-icon.svg" alt="" />
-                          <p>0.99 ETH</p>
-                          <p>1/1</p>
-                        </div>
-                      </div>
-                      <a href="#" class="btn-basic border-gradient">
-                        <i class="bx bxs-shopping-bag me-1"></i>
-                        <p>Place bid</p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide bg-primary">
-                  <div class="d-flex justify-content-center">
-                    <div class="position-relative mt-2" style="height: 298px">
-                      <img class="art" src="./assets/img/art/art-1.jpg" alt="" />
-                      <div class="d-flex position-absolute top-0 p-2 gap-1">
-                        <div class="badge category">Art</div>
-                        <div class="badge special">Special</div>
-                      </div>
-                      <div class="position-absolute top-0 end-0 p-2">
-                        <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
-                      </div>
-                      <div class="swiper-glass">
-                        <div class="d-flex text-center flex-column">
-                          <small>Remaining Time</small>
-                          <span class="d-flex align-items-center justify-content-center">
-                            <i class="bx bx-time-five me-1"></i>
-                            <p>12 h : 23 m : 09 s</p>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-content">
-                    <h5>Venus Statue Of Flowers #01</h5>
+                    <h5>Venus Statue Of Flowers #06</h5>
                     <div class="d-flex justify-content-between">
                       <div class="d-flex align-items-center">
                         <img class="creator" src="./assets/img/creator/creator-1.jpg" alt="" />
@@ -657,8 +659,11 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button-next"><i class="bx bx-chevron-right"></i></div>
-              <div class="swiper-button-prev"><i class="bx bx-chevron-left"></i></div>
+            </div>
+            <div class="live-navigation">
+              <i class="bx bx-chevron-left live-navigation-prev"></i>
+              <i class="bx bx-chevron-right live-navigation-next"></i>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -670,31 +675,34 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="./assets/js/script.js"></script>
     <script>
       var heroSwiper = new Swiper(".swiper-hero", {
         effect: "cards",
         // loop: true,
         grabCursor: true,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".hero-navigation-next",
+          prevEl: ".hero-navigation-prev",
         },
       });
 
       var liveSwiper = new Swiper(".swiper-live", {
         slidesPerView: 4,
         spaceBetween: 32,
+        // grabCursor: true,
         keyboard: {
           enabled: true,
         },
-        // loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+        loop: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+        },
+        navigation: {
+          nextEl: ".live-navigation-next",
+          prevEl: ".live-navigation-prev",
         },
       });
     </script>

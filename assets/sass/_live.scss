@@ -1,5 +1,7 @@
 #live-section {
-  height: 100vh;
+  height: 78vh;
+  margin-bottom: 200px;
+  position: relative;
   .live- {
     &badge {
       @include badge-basic;
@@ -66,7 +68,7 @@
         font-weight: map-get($font-weights, semibold);
         font-size: 14px;
         color: #ffffff;
-        margin-bottom: 1px;
+        margin-bottom: 3px;
       }
       & span {
         font-weight: map-get($font-weights, regular);

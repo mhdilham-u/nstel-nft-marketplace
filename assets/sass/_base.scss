@@ -41,10 +41,10 @@ body {
   background-color: #3f3c4e !important;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none;
-}
+// .swiper-button-next::after,
+// .swiper-button-prev::after {
+//   display: none;
+// }
 
 .view-all {
   display: flex;
@@ -187,23 +187,66 @@ body {
   }
 }
 
-.swiper {
-  .swiper-button-next,
-  .swiper-button-prev {
-    font-size: 45px;
-    color: $white-color;
-    // margin: 45px -160px 0 -90px !important;
-    // left: 0;
-    // right: 10px;
-    margin-right: -20px;
-    margin-left: -20px;
+i.bx.bx-chevron-left.hero-navigation-prev.swiper-button-disabled,
+i.bx.bx-chevron-right.hero-navigation-next.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: default;
+}
 
-    & .bx-chevron-right,
-    & .bx-chevron-left {
+.live-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: -260px -25px;
+
+  & i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid $white-color;
+    color: $white-color;
+    background-color: $background-color;
+    font-size: 2rem;
+    width: 45px;
+    height: 45px;
+    z-index: 1;
+  }
+  & .swiper-pagination {
+    bottom: 0;
+
+    &-bullet {
+      width: 10px;
+      height: 10px;
+      margin: 0 6px !important;
       border: 2px solid $white-color;
-      background-color: $black-color;
-      border-radius: 50%;
-      z-index: 2;
+
+      &-active {
+        border: unset;
+        background-color: $white-color;
+      }
     }
   }
 }
+
+// .swiper {
+//   height: 110%;
+//   .swiper-button-next,
+//   .swiper-button-prev {
+//     font-size: 45px;
+//     color: $white-color;
+//     // margin: 45px -160px 0 -90px !important;
+//     // left: 0;
+//     // right: 10px;
+//     margin-right: -20px;
+//     margin-left: -20px;
+
+//     & .bx-chevron-right,
+//     & .bx-chevron-left {
+//       border: 2px solid $white-color;
+//       background-color: $black-color;
+//       border-radius: 50%;
+//       z-index: 2;
+//     }
+//   }
+// }

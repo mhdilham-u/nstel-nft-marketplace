@@ -72,11 +72,35 @@
       opacity: 1;
       margin: 10px 0;
     }
+    &navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 510px;
+      position: absolute;
+      left: -100px;
+      top: 45%;
+      z-index: 1;
+
+      & i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 2px solid $white-color;
+        color: $white-color;
+        font-size: 2rem;
+        width: 45px;
+        height: 45px;
+        z-index: 1;
+      }
+    }
   }
 
   .swiper {
-    width: 240px;
-    height: 320px;
+    width: 300px;
+    height: 482px;
+    position: relative;
     &-wrapper {
       width: auto;
     }
@@ -139,7 +163,7 @@
       align-items: center;
       position: absolute;
       left: 30%;
-      bottom: 50%;
+      bottom: 55%;
     }
     &-glass {
       display: flex;
@@ -175,18 +199,6 @@
       }
       & .bidder img {
         margin-left: -19px;
-      }
-    }
-    &-button-next,
-    &-button-prev {
-      font-size: 45px;
-      color: $white-color;
-      margin: 45px -160px 0 -90px !important;
-
-      & .bx-chevron-right,
-      & .bx-chevron-left {
-        border: 2px solid $white-color;
-        border-radius: 50%;
       }
     }
   }
