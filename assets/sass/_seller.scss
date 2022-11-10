@@ -1,0 +1,38 @@
+#top-seller {
+  margin-bottom: 90px;
+  h1 {
+    @include heading-section;
+  }
+  h6 {
+    font-weight: map-get($font-weights, semibold);
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    margin-right: 12px;
+  }
+  img:not(.eth) {
+    border-radius: 20px;
+    margin-right: 19px;
+  }
+  img.verified {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  h2 {
+    font-weight: map-get($font-weights, semibold);
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  span {
+    font-weight: map-get($font-weights, medium);
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    background: linear-gradient(276.03deg, #b050e9 5.64%, #e7a4b1 50.71%, #d593d8 94.87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-left: 5px;
+  }
+}
