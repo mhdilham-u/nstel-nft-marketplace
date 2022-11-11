@@ -1,5 +1,5 @@
 # Nstel ~ NFT Marketplace
-Landing page for NFT Marketplace <br><br>
+Landing page for NFT Marketplace (desktop version only! min-width: 1440px) <br><br>
 &copy;Copyright <a href="https://github.com/OrloopDA">Orloop Digital Agency</a>
 
 <a href="https://mhdilham-u.github.io/nstel-nft-marketplace/">
