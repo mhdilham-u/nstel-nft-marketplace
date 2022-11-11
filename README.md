@@ -1,4 +1,4 @@
-# Nstel - NFT Marketpalce
+# Nstel ~ NFT Marketplace
 Landing page for NFT Marketplace <br><br>
 &copy;Copyright <a href="https://github.com/OrloopDA">Orloop Digital Agency</a>
 
