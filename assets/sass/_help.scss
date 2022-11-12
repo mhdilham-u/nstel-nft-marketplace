@@ -30,4 +30,13 @@
     background-color: $primary-color;
     cursor: pointer;
   }
+  .col-3 {
+    padding: 25px;
+    border-radius: 15px;
+
+    &:hover {
+      background-color: $primary-color !important;
+      cursor: pointer;
+    }
+  }
 }

@@ -71,6 +71,87 @@
       </div>
     </nav>
 
+    <!-- Modal Create Items -->
+    <div class="modal modal-lg fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Create Items</h1>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Title</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="item title" />
+            </div>
+            <label for="price" class="form-label">Price</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text">
+                <svg width="12" height="19" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 0.5L0 8.18293L4.5 10.9268L9 8.18293L4.5 0.5ZM0 9.09756L4.5 15.5L9 9.09756L4.5 11.8415L0 9.09756Z" fill="grey" />
+                </svg>
+              </span>
+              <input type="text" id="price" class="form-control" placeholder="4.99" aria-label="Amount (to the nearest dollar)" />
+              <span class="input-group-text text-secondary">.ETH</span>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" placeholder='e.g  "this is very limited items"' rows="3"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="modal-btn text-dark" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="modal-btn bg-gradient">Upload!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Place Bid -->
+    <div class="modal fade" id="placeBidModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header d-flex flex-column">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Place a Bid <br />
+              “ Venus Statue Of Flowers #01 “
+            </h1>
+            <h6 class="mt-3">Your Balance <span class="fw-semibold">1024.321 ETH</span></h6>
+          </div>
+
+          <div class="modal-body">
+            <label for="price" class="form-label">Price</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text">
+                <svg width="12" height="19" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 0.5L0 8.18293L4.5 10.9268L9 8.18293L4.5 0.5ZM0 9.09756L4.5 15.5L9 9.09756L4.5 11.8415L0 9.09756Z" fill="grey" />
+                </svg>
+              </span>
+              <input type="text" id="price" class="form-control" placeholder="0.0" aria-label="Amount (to the nearest dollar)" />
+              <span class="input-group-text text-secondary">.ETH</span>
+            </div>
+            <div class="d-flex flex-column pt-3 gap-3">
+              <div class="d-flex justify-content-between text-secondary">
+                <p>You must bid at least:</p>
+                <p>0.99 ETH</p>
+              </div>
+              <div class="d-flex justify-content-between text-secondary">
+                <p>Service fee:</p>
+                <p>0.05 ETH</p>
+              </div>
+              <div class="d-flex justify-content-between text-secondary">
+                <p>Total bid amount:</p>
+                <p>1.04 ETH</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="modal-btn text-dark" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="modal-btn bg-gradient"><i class="bx bxs-shopping-bag me-1"></i>Place Bid!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Hero - Section -->
     <section id="hero-section">
       <div class="container">
@@ -86,8 +167,9 @@
               collection of cryptocurrencies and tokens (NFT).
             </p>
             <div class="d-flex gap-4">
-              <a href="#" class="hero-btn"><i class="bx bx-rocket me-2"></i> Discover</a>
-              <a href="#" class="hero-btn border-gradient"><i class="bx bx-edit me-2"></i> Create</a>
+              <a href="#discover-item" class="hero-btn"><i class="bx bx-rocket me-2"></i> Discover</a>
+              <a type="button" class="hero-btn border-gradient" data-bs-toggle="modal" data-bs-target="#createModal"> <i class="bx bx-edit me-2"></i> Create </a>
+              <!-- <a href="#" class="hero-btn border-gradient"><i class="bx bx-edit me-2"></i> Create</a> -->
             </div>
             <div class="d-flex gap-3">
               <div class="hero-sum">
@@ -118,7 +200,7 @@
                       </div>
                       <div class="badge like"><i class="bx bxs-heart text-danger me-1"></i> 2.8 k</div>
                     </div>
-                    <a href="#" class="swiper-btn"><i class="bx bxs-shopping-bag me-1"></i> Place Bid</a>
+                    <a type="button" class="swiper-btn" data-bs-toggle="modal" data-bs-target="#placeBidModal"><i class="bx bxs-shopping-bag me-1"></i> Place Bid</a>
                     <div class="swiper-glass">
                       <h5>Venus Statue of Flowers #01</h5>
                       <div class="d-flex align-items-center justify-content-between">
@@ -149,7 +231,7 @@
                       </div>
                       <div class="badge like"><i class="bx bxs-heart text-danger me-1"></i> 2.8 k</div>
                     </div>
-                    <a href="#" class="swiper-btn"><i class="bx bxs-shopping-bag me-1"></i> Place Bid</a>
+                    <a type="button" class="swiper-btn" data-bs-toggle="modal" data-bs-target="#placeBidModal"><i class="bx bxs-shopping-bag me-1"></i> Place Bid</a>
                     <div class="swiper-glass">
                       <h5>Venus Statue of Flowers #02</h5>
                       <div class="d-flex align-items-center justify-content-between">
@@ -180,7 +262,7 @@
                       </div>
                       <div class="badge like"><i class="bx bxs-heart text-danger me-1"></i> 2.8 k</div>
                     </div>
-                    <a href="#" class="swiper-btn"><i class="bx bxs-shopping-bag me-1"></i> Place Bid</a>
+                    <a type="button" class="swiper-btn" data-bs-toggle="modal" data-bs-target="#placeBidModal"><i class="bx bxs-shopping-bag me-1"></i> Place Bid</a>
                     <div class="swiper-glass">
                       <h5>Venus Statue of Flowers #03</h5>
                       <div class="d-flex align-items-center justify-content-between">
@@ -211,7 +293,7 @@
                       </div>
                       <div class="badge like"><i class="bx bxs-heart text-danger me-1"></i> 2.8 k</div>
                     </div>
-                    <a href="#" class="swiper-btn"><i class="bx bxs-shopping-bag me-1"></i> Place Bid</a>
+                    <a type="button" class="swiper-btn" data-bs-toggle="modal" data-bs-target="#placeBidModal"><i class="bx bxs-shopping-bag me-1"></i> Place Bid</a>
                     <div class="swiper-glass">
                       <h5>Venus Statue of Flowers #04</h5>
                       <div class="d-flex align-items-center justify-content-between">
@@ -242,7 +324,7 @@
                       </div>
                       <div class="badge like"><i class="bx bxs-heart text-danger text-danger me-1"></i> 2.8 k</div>
                     </div>
-                    <a href="#" class="swiper-btn"><i class="bx bxs-shopping-bag me-1"></i> Place Bid</a>
+                    <a type="button" class="swiper-btn" data-bs-toggle="modal" data-bs-target="#placeBidModal"><i class="bx bxs-shopping-bag me-1"></i> Place Bid</a>
                     <div class="swiper-glass">
                       <h5>Venus Statue of Flowers #05</h5>
                       <div class="d-flex align-items-center justify-content-between">
@@ -273,7 +355,7 @@
                       </div>
                       <div class="badge like"><i class="bx bxs-heart text-danger me-1"></i> 2.8 k</div>
                     </div>
-                    <a href="#" class="swiper-btn"><i class="bx bxs-shopping-bag me-1"></i> Place Bid</a>
+                    <a type="button" class="swiper-btn" data-bs-toggle="modal" data-bs-target="#placeBidModal"><i class="bx bxs-shopping-bag me-1"></i> Place Bid</a>
                     <div class="swiper-glass">
                       <h5>Venus Statue of Flowers #06</h5>
                       <div class="d-flex align-items-center justify-content-between">
@@ -371,7 +453,7 @@
                           <p>1/1</p>
                         </div>
                       </div>
-                      <a href="#" class="btn-basic border-gradient">
+                      <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                         <i class="bx bxs-shopping-bag me-1"></i>
                         <p>Place bid</p>
                       </a>
@@ -427,7 +509,7 @@
                           <p>1/1</p>
                         </div>
                       </div>
-                      <a href="#" class="btn-basic border-gradient">
+                      <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                         <i class="bx bxs-shopping-bag me-1"></i>
                         <p>Place bid</p>
                       </a>
@@ -483,7 +565,7 @@
                           <p>1/1</p>
                         </div>
                       </div>
-                      <a href="#" class="btn-basic border-gradient">
+                      <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                         <i class="bx bxs-shopping-bag me-1"></i>
                         <p>Place bid</p>
                       </a>
@@ -539,7 +621,7 @@
                           <p>1/1</p>
                         </div>
                       </div>
-                      <a href="#" class="btn-basic border-gradient">
+                      <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                         <i class="bx bxs-shopping-bag me-1"></i>
                         <p>Place bid</p>
                       </a>
@@ -595,7 +677,7 @@
                           <p>1/1</p>
                         </div>
                       </div>
-                      <a href="#" class="btn-basic border-gradient">
+                      <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                         <i class="bx bxs-shopping-bag me-1"></i>
                         <p>Place bid</p>
                       </a>
@@ -651,7 +733,7 @@
                           <p>1/1</p>
                         </div>
                       </div>
-                      <a href="#" class="btn-basic border-gradient">
+                      <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                         <i class="bx bxs-shopping-bag me-1"></i>
                         <p>Place bid</p>
                       </a>
@@ -936,9 +1018,9 @@
                       <h2>Digital Art Of Abstract’s</h2>
                       <h3>Curated by <span>Gennifer Rusell</span></h3>
                     </div>
-                    <a href="#" class="collection-btn">
-                      <p>See More</p>
-                      <i class="bx bx-right-arrow-alt"></i>
+                    <a type="button" class="collection-btn">
+                      <i class="bx bxs-heart text-danger me-1"></i>
+                      <p>4.9 k</p>
                     </a>
                   </div>
                 </div>
@@ -958,9 +1040,9 @@
                       <h2>Digital Art Of Abstract’s</h2>
                       <h3>Curated by <span>Gennifer Rusell</span></h3>
                     </div>
-                    <a href="#" class="collection-btn">
-                      <p>See More</p>
-                      <i class="bx bx-right-arrow-alt"></i>
+                    <a type="button" class="collection-btn">
+                      <i class="bx bxs-heart text-danger me-1"></i>
+                      <p>4.9 k</p>
                     </a>
                   </div>
                 </div>
@@ -980,9 +1062,9 @@
                       <h2>Digital Art Of Abstract’s</h2>
                       <h3>Curated by <span>Gennifer Rusell</span></h3>
                     </div>
-                    <a href="#" class="collection-btn">
-                      <p>See More</p>
-                      <i class="bx bx-right-arrow-alt"></i>
+                    <a type="button" class="collection-btn">
+                      <i class="bx bxs-heart text-danger me-1"></i>
+                      <p>4.9 k</p>
                     </a>
                   </div>
                 </div>
@@ -1002,9 +1084,9 @@
                       <h2>Digital Art Of Abstract’s</h2>
                       <h3>Curated by <span>Gennifer Rusell</span></h3>
                     </div>
-                    <a href="#" class="collection-btn">
-                      <p>See More</p>
-                      <i class="bx bx-right-arrow-alt"></i>
+                    <a type="button" class="collection-btn">
+                      <i class="bx bxs-heart text-danger me-1"></i>
+                      <p>4.9 k</p>
                     </a>
                   </div>
                 </div>
@@ -1024,9 +1106,9 @@
                       <h2>Digital Art Of Abstract’s</h2>
                       <h3>Curated by <span>Gennifer Rusell</span></h3>
                     </div>
-                    <a href="#" class="collection-btn">
-                      <p>See More</p>
-                      <i class="bx bx-right-arrow-alt"></i>
+                    <a type="button" class="collection-btn">
+                      <i class="bx bxs-heart text-danger me-1"></i>
+                      <p>4.9 k</p>
                     </a>
                   </div>
                 </div>
@@ -1046,9 +1128,9 @@
                       <h2>Digital Art Of Abstract’s</h2>
                       <h3>Curated by <span>Gennifer Rusell</span></h3>
                     </div>
-                    <a href="#" class="collection-btn">
-                      <p>See More</p>
-                      <i class="bx bx-right-arrow-alt"></i>
+                    <a type="button" class="collection-btn">
+                      <i class="bx bxs-heart text-danger me-1"></i>
+                      <p>4.9 k</p>
                     </a>
                   </div>
                 </div>
@@ -1079,12 +1161,19 @@
                 <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All Category</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-art-tab" data-bs-toggle="pill" data-bs-target="#pills-art" type="button" role="tab" aria-controls="pills-art" aria-selected="false">Art</button>
+                <button class="nav-link" id="pills-art-tab" data-bs-toggle="pill" data-bs-target="#pills-art" type="button" role="tab" aria-controls="pills-art" aria-selected="true">Art</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-music-tab" data-bs-toggle="pill" data-bs-target="#pills-music" type="button" role="tab" aria-controls="pills-music" aria-selected="false">Music</button>
+                <button class="nav-link" id="pills-music-tab" data-bs-toggle="pill" data-bs-target="#pills-music" type="button" role="tab" aria-controls="pills-music" aria-selected="true">Music</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-metaverse-tab" data-bs-toggle="pill" data-bs-target="#pills-metaverse" type="button" role="tab" aria-controls="pills-metaverse" aria-selected="true">Metaverse</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-game-tab" data-bs-toggle="pill" data-bs-target="#pills-game" type="button" role="tab" aria-controls="pills-game" aria-selected="true">Game</button>
               </li>
             </ul>
+
             <div class="tab-content" id="pills-tabContent">
               <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
                 <div class="row">
@@ -1128,7 +1217,7 @@
                             <p>1/1</p>
                           </div>
                         </div>
-                        <a href="#" class="btn-basic border-gradient">
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                           <i class="bx bxs-shopping-bag me-1"></i>
                           <p>Place bid</p>
                         </a>
@@ -1175,7 +1264,7 @@
                             <p>1/1</p>
                           </div>
                         </div>
-                        <a href="#" class="btn-basic border-gradient">
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                           <i class="bx bxs-shopping-bag me-1"></i>
                           <p>Place bid</p>
                         </a>
@@ -1222,7 +1311,7 @@
                             <p>1/1</p>
                           </div>
                         </div>
-                        <a href="#" class="btn-basic border-gradient">
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                           <i class="bx bxs-shopping-bag me-1"></i>
                           <p>Place bid</p>
                         </a>
@@ -1269,7 +1358,7 @@
                             <p>1/1</p>
                           </div>
                         </div>
-                        <a href="#" class="btn-basic border-gradient">
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                           <i class="bx bxs-shopping-bag me-1"></i>
                           <p>Place bid</p>
                         </a>
@@ -1317,7 +1406,7 @@
                             <p>1/1</p>
                           </div>
                         </div>
-                        <a href="#" class="btn-basic border-gradient">
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                           <i class="bx bxs-shopping-bag me-1"></i>
                           <p>Place bid</p>
                         </a>
@@ -1364,7 +1453,7 @@
                             <p>1/1</p>
                           </div>
                         </div>
-                        <a href="#" class="btn-basic border-gradient">
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                           <i class="bx bxs-shopping-bag me-1"></i>
                           <p>Place bid</p>
                         </a>
@@ -1411,7 +1500,7 @@
                             <p>1/1</p>
                           </div>
                         </div>
-                        <a href="#" class="btn-basic border-gradient">
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                           <i class="bx bxs-shopping-bag me-1"></i>
                           <p>Place bid</p>
                         </a>
@@ -1458,7 +1547,7 @@
                             <p>1/1</p>
                           </div>
                         </div>
-                        <a href="#" class="btn-basic border-gradient">
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                           <i class="bx bxs-shopping-bag me-1"></i>
                           <p>Place bid</p>
                         </a>
@@ -1473,6 +1562,203 @@
                         <div class="d-flex position-absolute top-0 p-2 gap-1">
                           <div class="badge category">Art</div>
                           <div class="badge special">Special</div>
+                        </div>
+                        <div class="position-absolute top-0 end-0 p-2">
+                          <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-content">
+                      <h5>Venus Statue Of Flowers #09</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                          <img class="creator" src="./assets/img/creator/creator-5.jpg" alt="" />
+                          <div class="d-flex flex-column ms-2">
+                            <h6>Ralph Edwards</h6>
+                            <span>Creator</span>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="badge dark me-1">bsc</div>
+                          <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
+                        </div>
+                      </div>
+                      <div class="text-dark">
+                        <hr />
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                          <span>Highest Bid</span>
+                          <div class="d-flex align-items-center">
+                            <img src="./assets/img/ethereum-icon.svg" alt="" />
+                            <p>0.99 ETH</p>
+                            <p>1/1</p>
+                          </div>
+                        </div>
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                          <i class="bx bxs-shopping-bag me-1"></i>
+                          <p>Place bid</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide bg-primary col-3 new-card">
+                    <div class="d-flex justify-content-center">
+                      <div class="position-relative mt-2" style="height: 298px">
+                        <img class="art" src="./assets/img/art/art-2.jpg" alt="" />
+                        <div class="d-flex position-absolute top-0 p-2 gap-1">
+                          <div class="badge category">Art</div>
+                          <div class="badge hot">Hot</div>
+                        </div>
+                        <div class="position-absolute top-0 end-0 p-2">
+                          <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-content">
+                      <h5>Venus Statue Of Flowers #10</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                          <img class="creator" src="./assets/img/creator/creator-4.jpg" alt="" />
+                          <div class="d-flex flex-column ms-2">
+                            <h6>Wade Warren</h6>
+                            <span>Creator</span>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="badge dark me-1">bsc</div>
+                          <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
+                        </div>
+                      </div>
+                      <div class="text-dark">
+                        <hr />
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                          <span>Highest Bid</span>
+                          <div class="d-flex align-items-center">
+                            <img src="./assets/img/ethereum-icon.svg" alt="" />
+                            <p>0.99 ETH</p>
+                            <p>1/1</p>
+                          </div>
+                        </div>
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                          <i class="bx bxs-shopping-bag me-1"></i>
+                          <p>Place bid</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide bg-primary col-3 new-card">
+                    <div class="d-flex justify-content-center">
+                      <div class="position-relative mt-2" style="height: 298px">
+                        <img class="art" src="./assets/img/art/art-3.jpg" alt="" />
+                        <div class="d-flex position-absolute top-0 p-2 gap-1">
+                          <div class="badge category">Art</div>
+                          <div class="badge new">New</div>
+                        </div>
+                        <div class="position-absolute top-0 end-0 p-2">
+                          <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-content">
+                      <h5>Venus Statue Of Flowers #11</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                          <img class="creator" src="./assets/img/creator/creator-9.jpg" alt="" />
+                          <div class="d-flex flex-column ms-2">
+                            <h6>Marvin Lane</h6>
+                            <span>Creator</span>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="badge dark me-1">bsc</div>
+                          <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
+                        </div>
+                      </div>
+                      <div class="text-dark">
+                        <hr />
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                          <span>Highest Bid</span>
+                          <div class="d-flex align-items-center">
+                            <img src="./assets/img/ethereum-icon.svg" alt="" />
+                            <p>0.99 ETH</p>
+                            <p>1/1</p>
+                          </div>
+                        </div>
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                          <i class="bx bxs-shopping-bag me-1"></i>
+                          <p>Place bid</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide bg-primary col-3 new-card">
+                    <div class="d-flex justify-content-center">
+                      <div class="position-relative mt-2" style="height: 298px">
+                        <img class="art" src="./assets/img/art/art-6.jpg" alt="" />
+                        <div class="d-flex position-absolute top-0 p-2 gap-1">
+                          <div class="badge category">Art</div>
+                          <div class="badge special">Special</div>
+                        </div>
+                        <div class="position-absolute top-0 end-0 p-2">
+                          <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-content">
+                      <h5>Venus Statue Of Flowers #12</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                          <img class="creator" src="./assets/img/creator/creator-2.jpg" alt="" />
+                          <div class="d-flex flex-column ms-2">
+                            <h6>Alesha Bella</h6>
+                            <span>Creator</span>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="badge dark me-1">bsc</div>
+                          <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
+                        </div>
+                      </div>
+                      <div class="text-dark">
+                        <hr />
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                          <span>Highest Bid</span>
+                          <div class="d-flex align-items-center">
+                            <img src="./assets/img/ethereum-icon.svg" alt="" />
+                            <p>0.99 ETH</p>
+                            <p>1/1</p>
+                          </div>
+                        </div>
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                          <i class="bx bxs-shopping-bag me-1"></i>
+                          <p>Place bid</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 text-center mb-4">
+                    <b class="new-card text-white">------------------------+ No one more NFT's +------------------------</b>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade show" id="pills-art" role="tabpanel" aria-labelledby="pills-art-tab" tabindex="0">
+                <div class="row">
+                  <div class="swiper-slide bg-primary col-3">
+                    <div class="d-flex justify-content-center">
+                      <div class="position-relative mt-2" style="height: 298px">
+                        <img class="art" src="./assets/img/art/art-6.jpg" alt="" />
+                        <div class="d-flex position-absolute top-0 p-2 gap-1">
+                          <div class="badge category">Art</div>
+                          <div class="badge hot">Hot</div>
                         </div>
                         <div class="position-absolute top-0 end-0 p-2">
                           <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
@@ -1506,17 +1792,17 @@
                             <p>1/1</p>
                           </div>
                         </div>
-                        <a href="#" class="btn-basic border-gradient">
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                           <i class="bx bxs-shopping-bag me-1"></i>
                           <p>Place bid</p>
                         </a>
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide bg-primary col-3 new-card">
+                  <div class="swiper-slide bg-primary col-3">
                     <div class="d-flex justify-content-center">
                       <div class="position-relative mt-2" style="height: 298px">
-                        <img class="art" src="./assets/img/art/art-2.jpg" alt="" />
+                        <img class="art" src="./assets/img/art/art-5.jpg" alt="" />
                         <div class="d-flex position-absolute top-0 p-2 gap-1">
                           <div class="badge category">Art</div>
                           <div class="badge hot">Hot</div>
@@ -1553,20 +1839,20 @@
                             <p>1/1</p>
                           </div>
                         </div>
-                        <a href="#" class="btn-basic border-gradient">
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                           <i class="bx bxs-shopping-bag me-1"></i>
                           <p>Place bid</p>
                         </a>
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide bg-primary col-3 new-card">
+                  <div class="swiper-slide bg-primary col-3">
                     <div class="d-flex justify-content-center">
                       <div class="position-relative mt-2" style="height: 298px">
                         <img class="art" src="./assets/img/art/art-3.jpg" alt="" />
                         <div class="d-flex position-absolute top-0 p-2 gap-1">
                           <div class="badge category">Art</div>
-                          <div class="badge new">New</div>
+                          <div class="badge hot">Hot</div>
                         </div>
                         <div class="position-absolute top-0 end-0 p-2">
                           <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
@@ -1600,20 +1886,20 @@
                             <p>1/1</p>
                           </div>
                         </div>
-                        <a href="#" class="btn-basic border-gradient">
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                           <i class="bx bxs-shopping-bag me-1"></i>
                           <p>Place bid</p>
                         </a>
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide bg-primary col-3 new-card">
+                  <div class="swiper-slide bg-primary col-3">
                     <div class="d-flex justify-content-center">
                       <div class="position-relative mt-2" style="height: 298px">
-                        <img class="art" src="./assets/img/art/art-6.jpg" alt="" />
+                        <img class="art" src="./assets/img/art/art-4.jpg" alt="" />
                         <div class="d-flex position-absolute top-0 p-2 gap-1">
                           <div class="badge category">Art</div>
-                          <div class="badge special">Special</div>
+                          <div class="badge hot">Hot</div>
                         </div>
                         <div class="position-absolute top-0 end-0 p-2">
                           <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
@@ -1647,7 +1933,7 @@
                             <p>1/1</p>
                           </div>
                         </div>
-                        <a href="#" class="btn-basic border-gradient">
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
                           <i class="bx bxs-shopping-bag me-1"></i>
                           <p>Place bid</p>
                         </a>
@@ -1657,18 +1943,325 @@
                 </div>
                 <div class="row">
                   <div class="col-12 text-center mb-4">
-                    <b class="new-card text-white">------------------------+ No one more NFT's +------------------------</b>
+                    <b class="text-white">------------------------+ No one more NFT's +------------------------</b>
                   </div>
                 </div>
               </div>
-              <div class="tab-pane d-flex fade" id="pills-art" role="tabpanel" aria-labelledby="pills-art-tab" tabindex="0"></div>
-              <div class="tab-pane fade" id="pills-music" role="tabpanel" aria-labelledby="pills-music-tab" tabindex="0">...</div>
+              <div class="tab-pane fade show" id="pills-music" role="tabpanel" aria-labelledby="pills-music-tab" tabindex="0">
+                <div class="row">
+                  <div class="swiper-slide bg-primary col-3">
+                    <div class="d-flex justify-content-center">
+                      <div class="position-relative mt-2" style="height: 298px">
+                        <img class="art" src="./assets/img/art/art-6.jpg" alt="" />
+                        <div class="d-flex position-absolute top-0 p-2 gap-1">
+                          <div class="badge category">Music</div>
+                          <div class="badge new">New</div>
+                        </div>
+                        <div class="position-absolute top-0 end-0 p-2">
+                          <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-content">
+                      <h5>Venus Statue Of Flowers #01</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                          <img class="creator" src="./assets/img/creator/creator-5.jpg" alt="" />
+                          <div class="d-flex flex-column ms-2">
+                            <h6>Ralph Edwards</h6>
+                            <span>Creator</span>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="badge dark me-1">bsc</div>
+                          <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
+                        </div>
+                      </div>
+                      <div class="text-dark">
+                        <hr />
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                          <span>Highest Bid</span>
+                          <div class="d-flex align-items-center">
+                            <img src="./assets/img/ethereum-icon.svg" alt="" />
+                            <p>0.99 ETH</p>
+                            <p>1/1</p>
+                          </div>
+                        </div>
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                          <i class="bx bxs-shopping-bag me-1"></i>
+                          <p>Place bid</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide bg-primary col-3">
+                    <div class="d-flex justify-content-center">
+                      <div class="position-relative mt-2" style="height: 298px">
+                        <img class="art" src="./assets/img/art/art-5.jpg" alt="" />
+                        <div class="d-flex position-absolute top-0 p-2 gap-1">
+                          <div class="badge category">Music</div>
+                          <div class="badge new">New</div>
+                        </div>
+                        <div class="position-absolute top-0 end-0 p-2">
+                          <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-content">
+                      <h5>Venus Statue Of Flowers #02</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                          <img class="creator" src="./assets/img/creator/creator-4.jpg" alt="" />
+                          <div class="d-flex flex-column ms-2">
+                            <h6>Wade Warren</h6>
+                            <span>Creator</span>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="badge dark me-1">bsc</div>
+                          <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
+                        </div>
+                      </div>
+                      <div class="text-dark">
+                        <hr />
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                          <span>Highest Bid</span>
+                          <div class="d-flex align-items-center">
+                            <img src="./assets/img/ethereum-icon.svg" alt="" />
+                            <p>0.99 ETH</p>
+                            <p>1/1</p>
+                          </div>
+                        </div>
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                          <i class="bx bxs-shopping-bag me-1"></i>
+                          <p>Place bid</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 text-center mb-4">
+                    <b class="text-white">------------------------+ No one more NFT's +------------------------</b>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade show" id="pills-metaverse" role="tabpanel" aria-labelledby="pills-metaverse-tab" tabindex="0">
+                <div class="row">
+                  <div class="swiper-slide bg-primary col-3">
+                    <div class="d-flex justify-content-center">
+                      <div class="position-relative mt-2" style="height: 298px">
+                        <img class="art" src="./assets/img/art/art-1.jpg" alt="" />
+                        <div class="d-flex position-absolute top-0 p-2 gap-1">
+                          <div class="badge category">Metaverse</div>
+                          <div class="badge special">Special</div>
+                        </div>
+                        <div class="position-absolute top-0 end-0 p-2">
+                          <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-content">
+                      <h5>Venus Statue Of Flowers #01</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                          <img class="creator" src="./assets/img/creator/creator-5.jpg" alt="" />
+                          <div class="d-flex flex-column ms-2">
+                            <h6>Ralph Edwards</h6>
+                            <span>Creator</span>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="badge dark me-1">bsc</div>
+                          <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
+                        </div>
+                      </div>
+                      <div class="text-dark">
+                        <hr />
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                          <span>Highest Bid</span>
+                          <div class="d-flex align-items-center">
+                            <img src="./assets/img/ethereum-icon.svg" alt="" />
+                            <p>0.99 ETH</p>
+                            <p>1/1</p>
+                          </div>
+                        </div>
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                          <i class="bx bxs-shopping-bag me-1"></i>
+                          <p>Place bid</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide bg-primary col-3">
+                    <div class="d-flex justify-content-center">
+                      <div class="position-relative mt-2" style="height: 298px">
+                        <img class="art" src="./assets/img/art/art-1.jpg" alt="" />
+                        <div class="d-flex position-absolute top-0 p-2 gap-1">
+                          <div class="badge category">Metaverse</div>
+                          <div class="badge special">Special</div>
+                        </div>
+                        <div class="position-absolute top-0 end-0 p-2">
+                          <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-content">
+                      <h5>Venus Statue Of Flowers #02</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                          <img class="creator" src="./assets/img/creator/creator-4.jpg" alt="" />
+                          <div class="d-flex flex-column ms-2">
+                            <h6>Wade Warren</h6>
+                            <span>Creator</span>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="badge dark me-1">bsc</div>
+                          <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
+                        </div>
+                      </div>
+                      <div class="text-dark">
+                        <hr />
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                          <span>Highest Bid</span>
+                          <div class="d-flex align-items-center">
+                            <img src="./assets/img/ethereum-icon.svg" alt="" />
+                            <p>0.99 ETH</p>
+                            <p>1/1</p>
+                          </div>
+                        </div>
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                          <i class="bx bxs-shopping-bag me-1"></i>
+                          <p>Place bid</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 text-center mb-4">
+                    <b class="text-white">------------------------+ No one more NFT's +------------------------</b>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade show" id="pills-game" role="tabpanel" aria-labelledby="pills-game-tab" tabindex="0">
+                <div class="row">
+                  <div class="swiper-slide bg-primary col-3">
+                    <div class="d-flex justify-content-center">
+                      <div class="position-relative mt-2" style="height: 298px">
+                        <img class="art" src="./assets/img/art/art-1.jpg" alt="" />
+                        <div class="d-flex position-absolute top-0 p-2 gap-1">
+                          <div class="badge category">Game</div>
+                          <div class="badge hot">hot</div>
+                        </div>
+                        <div class="position-absolute top-0 end-0 p-2">
+                          <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-content">
+                      <h5>Venus Statue Of Flowers #01</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                          <img class="creator" src="./assets/img/creator/creator-5.jpg" alt="" />
+                          <div class="d-flex flex-column ms-2">
+                            <h6>Ralph Edwards</h6>
+                            <span>Creator</span>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="badge dark me-1">bsc</div>
+                          <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
+                        </div>
+                      </div>
+                      <div class="text-dark">
+                        <hr />
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                          <span>Highest Bid</span>
+                          <div class="d-flex align-items-center">
+                            <img src="./assets/img/ethereum-icon.svg" alt="" />
+                            <p>0.99 ETH</p>
+                            <p>1/1</p>
+                          </div>
+                        </div>
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                          <i class="bx bxs-shopping-bag me-1"></i>
+                          <p>Place bid</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide bg-primary col-3">
+                    <div class="d-flex justify-content-center">
+                      <div class="position-relative mt-2" style="height: 298px">
+                        <img class="art" src="./assets/img/art/art-2.jpg" alt="" />
+                        <div class="d-flex position-absolute top-0 p-2 gap-1">
+                          <div class="badge category">Game</div>
+                          <div class="badge special">Special</div>
+                        </div>
+                        <div class="position-absolute top-0 end-0 p-2">
+                          <a href="" class="fs-4 text-white"><i class="bx bx-dots-horizontal-rounded"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-content">
+                      <h5>Venus Statue Of Flowers #02</h5>
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                          <img class="creator" src="./assets/img/creator/creator-4.jpg" alt="" />
+                          <div class="d-flex flex-column ms-2">
+                            <h6>Wade Warren</h6>
+                            <span>Creator</span>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="badge dark me-1">bsc</div>
+                          <div class="badge dark text-lowercase"><i class="bx bxs-heart text-danger me-1"></i> 4.9 k</div>
+                        </div>
+                      </div>
+                      <div class="text-dark">
+                        <hr />
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex flex-column">
+                          <span>Highest Bid</span>
+                          <div class="d-flex align-items-center">
+                            <img src="./assets/img/ethereum-icon.svg" alt="" />
+                            <p>0.99 ETH</p>
+                            <p>1/1</p>
+                          </div>
+                        </div>
+                        <a type="button" class="btn-basic border-gradient" data-bs-toggle="modal" data-bs-target="#placeBidModal">
+                          <i class="bx bxs-shopping-bag me-1"></i>
+                          <p>Place bid</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 text-center mb-4">
+                    <b class="text-white">------------------------+ No one more NFT's +------------------------</b>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-12">
-            <a href="#!" class="btn btn-load">Load More...</a>
+            <a type="button" class="btn btn-load">Load More...</a>
           </div>
         </div>
       </div>

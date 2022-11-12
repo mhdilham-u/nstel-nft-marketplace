@@ -29,9 +29,9 @@
         border-radius: 15px;
         object-fit: cover;
         object-position: 25% 25%;
+        transition: 0.4s;
         &:hover {
-          // filter: blur(1px);
-          opacity: 0.2;
+          object-position: 25% 35%;
           cursor: pointer;
         }
       }
