@@ -6,8 +6,30 @@
     &badge {
       @include badge-basic;
     }
+    &navigation {
+      margin: -310px -25px;
+    }
   }
   .swiper- {
+    &wrapper {
+      height: 525px;
+    }
+    &pagination {
+      bottom: 0;
+      margin-bottom: 0;
+
+      &-bullet {
+        width: 10px;
+        height: 10px;
+        margin: 0 6px !important;
+        border: 2px solid $white-color;
+
+        &-active {
+          border: unset;
+          background-color: $white-color;
+        }
+      }
+    }
     &slide {
       width: 300px !important;
       height: 482px;

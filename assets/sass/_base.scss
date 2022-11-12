@@ -41,10 +41,28 @@ body {
   background-color: #3f3c4e !important;
 }
 
-// .swiper-button-next::after,
-// .swiper-button-prev::after {
-//   display: none;
-// }
+.btn-load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 42px;
+  border: 2px solid $primary-color;
+  border-radius: 40px;
+  font-weight: map-get($font-weights, medium);
+  font-size: 14px;
+  color: $white-color;
+  margin: auto;
+
+  &:hover {
+    color: $white-color;
+    background-color: $primary-color;
+  }
+}
+
+.new-card {
+  display: none;
+}
 
 .view-all {
   display: flex;

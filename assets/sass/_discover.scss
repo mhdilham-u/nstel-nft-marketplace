@@ -1,4 +1,5 @@
 #discover-item {
+  margin-bottom: 90px;
   h1 {
     @include heading-section;
   }
@@ -7,10 +8,16 @@
       @include badge-basic;
     }
   }
+  .tab-pane {
+    & .row {
+      column-gap: 33px;
+    }
+  }
   .swiper- {
     &slide {
       width: 300px !important;
       height: 482px;
+      margin-bottom: 33px;
       // display: flex;
       // justify-content: center;
       border-radius: 20px;
@@ -21,6 +28,11 @@
         border-radius: 15px;
         object-fit: cover;
         object-position: 25% 25%;
+        &:hover {
+          // filter: blur(1px);
+          opacity: 0.2;
+          cursor: pointer;
+        }
       }
     }
     &glass {
@@ -63,6 +75,7 @@
         letter-spacing: 0.02em;
         color: $white-color;
         margin-bottom: 15px;
+        white-space: nowrap;
       }
       & h6 {
         font-weight: map-get($font-weights, semibold);
@@ -96,6 +109,28 @@
       & .bid-btn::before {
         content: "";
         @include border-gradient;
+      }
+    }
+  }
+  .nav- {
+    &pills {
+      margin-bottom: 30px !important;
+    }
+    &item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &link[data-bs-toggle="pill"] {
+      display: flex;
+      // width: 64px;
+      height: 37px;
+      border: 2px solid $primary-color;
+      border-radius: 25px;
+      color: $white-color;
+
+      &.active {
+        background-color: $primary-color;
       }
     }
   }
